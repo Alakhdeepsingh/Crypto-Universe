@@ -145,15 +145,20 @@ const CoinDetails = () => {
             />
 
             <Stat>
+            {/* As the name implies, the `Stat` component is used to display some statistics. */}
               <StatLabel>{coin.name}</StatLabel>
               <StatNumber>
                 {currencySymbol}
                 {coin.market_data.current_price[currency]}
+                {/* In coins money is changing in rupees and dollars by clicking on inr due to this line  */}
+
               </StatNumber>
               <StatHelpText>
                 <StatArrow
                   type={
                     coin.market_data.price_change_percentage_24h > 0
+                    //after clicking on bitcoin when below rupees negative and positive are coming it's because of this
+
                       ? "increase"
                       : "decrease"
                   }
@@ -163,9 +168,11 @@ const CoinDetails = () => {
             </Stat>
 
             <Badge
+            // Badges are used to highlight an item's status for quick recognition.
               fontSize={"2xl"}
               bgColor={"blackAlpha.800"}
               color={"white"}
+              //after clicking on bitcoin when below negative or positive value a number are coming it's because of this
             >{`#${coin.market_cap_rank}`}</Badge>
 
             <CustomBar

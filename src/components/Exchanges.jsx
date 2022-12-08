@@ -22,7 +22,9 @@ const Exchanges = () => {
       try {
         const { data } = await axios.get(`${server}/exchanges`);
         setExchanges(data);
+        //sending array to exchanges
         setLoading(false);
+        //jesse hii data fetch hojaega tabh loading false hojaega
       } catch (error) {
         setError(true);
         setLoading(false);
@@ -41,7 +43,10 @@ const Exchanges = () => {
       ) : (
         <>
           <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+            
             {exchanges.map((i) => (
+              //exchanges is array
+              //i is object
               <ExchangeCard
                 key={i.id}
                 name={i.name}
@@ -68,7 +73,7 @@ const ExchangeCard = ({ name, img, rank, url }) => (
       m={"4"}
       css={{
         "&:hover": {
-          transform: "scale(1.1)",
+          transform: "scale(1.4)",
         },
       }}
     >
@@ -84,6 +89,7 @@ const ExchangeCard = ({ name, img, rank, url }) => (
       </Heading>
 
       <Text noOfLines={1}>{name}</Text>
+      {/* //noOfLines is in chakra ui */}
     </VStack>
   </a>
 );

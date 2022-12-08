@@ -48,7 +48,7 @@ const Coins = () => {
       ) : (
         <>
           <RadioGroup value={currency} onChange={setCurrency} p={"8"}>
-            <HStack spacing={"4"}>
+            <HStack spacing={"8"}>
               <Radio value={"inr"}>INR</Radio>
               <Radio value={"usd"}>USD</Radio>
               <Radio value={"eur"}>EUR</Radio>
@@ -56,6 +56,7 @@ const Coins = () => {
           </RadioGroup>
 
           <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+          {/* justifyContent={"space-evenly"} it helps to bring in center and also space between them */}
             {coins.map((i) => (
               <CoinCard
                 id={i.id}
