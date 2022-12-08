@@ -22,9 +22,13 @@ const Exchanges = () => {
       try {
         const { data } = await axios.get(`${server}/exchanges`);
         setExchanges(data);
+<<<<<<< HEAD
         //sending array to exchanges
         setLoading(false);
         //jesse hii data fetch hojaega tabh loading false hojaega
+=======
+        setLoading(false);
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
       } catch (error) {
         setError(true);
         setLoading(false);
@@ -43,10 +47,14 @@ const Exchanges = () => {
       ) : (
         <>
           <HStack wrap={"wrap"} justifyContent={"space-evenly"}>
+<<<<<<< HEAD
             
             {exchanges.map((i) => (
               //exchanges is array
               //i is object
+=======
+            {exchanges.map((i) => (
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
               <ExchangeCard
                 key={i.id}
                 name={i.name}
@@ -73,7 +81,11 @@ const ExchangeCard = ({ name, img, rank, url }) => (
       m={"4"}
       css={{
         "&:hover": {
+<<<<<<< HEAD
           transform: "scale(1.4)",
+=======
+          transform: "scale(1.1)",
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
         },
       }}
     >
@@ -89,7 +101,10 @@ const ExchangeCard = ({ name, img, rank, url }) => (
       </Heading>
 
       <Text noOfLines={1}>{name}</Text>
+<<<<<<< HEAD
       {/* //noOfLines is in chakra ui */}
+=======
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
     </VStack>
   </a>
 );

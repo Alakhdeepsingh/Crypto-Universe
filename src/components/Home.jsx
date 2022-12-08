@@ -35,7 +35,11 @@ const Home = () => {
         color={"whiteAlpha.700"}
         mt={"-20"}
       >
+<<<<<<< HEAD
         Crypto Universe
+=======
+        Xcrypto
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
       </Text>
     </Box>
   );

@@ -145,20 +145,29 @@ const CoinDetails = () => {
             />
 
             <Stat>
+<<<<<<< HEAD
             {/* As the name implies, the `Stat` component is used to display some statistics. */}
+=======
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
               <StatLabel>{coin.name}</StatLabel>
               <StatNumber>
                 {currencySymbol}
                 {coin.market_data.current_price[currency]}
+<<<<<<< HEAD
                 {/* In coins money is changing in rupees and dollars by clicking on inr due to this line  */}
 
+=======
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
               </StatNumber>
               <StatHelpText>
                 <StatArrow
                   type={
                     coin.market_data.price_change_percentage_24h > 0
+<<<<<<< HEAD
                     //after clicking on bitcoin when below rupees negative and positive are coming it's because of this
 
+=======
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
                       ? "increase"
                       : "decrease"
                   }
@@ -168,11 +177,17 @@ const CoinDetails = () => {
             </Stat>
 
             <Badge
+<<<<<<< HEAD
             // Badges are used to highlight an item's status for quick recognition.
               fontSize={"2xl"}
               bgColor={"blackAlpha.800"}
               color={"white"}
               //after clicking on bitcoin when below negative or positive value a number are coming it's because of this
+=======
+              fontSize={"2xl"}
+              bgColor={"blackAlpha.800"}
+              color={"white"}
+>>>>>>> d191d2734c933c44faaf0e148468554a084c667f
             >{`#${coin.market_cap_rank}`}</Badge>
 
             <CustomBar
